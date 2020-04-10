@@ -20,6 +20,7 @@ GraphQL can improve querying and performance of your Rest APIs: https://blog.apo
 Future Updates:
 * Caching
 * Query Performance Improvement https://www.apollographql.com/docs/apollo-server/performance/apq/
+* Import schema: https://github.com/ardatan/graphql-import
 
 Chaining Reactions using Apollo Link: https://www.apollographql.com/docs/link/
 
