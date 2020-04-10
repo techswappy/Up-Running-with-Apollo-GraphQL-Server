@@ -17,6 +17,10 @@ Contains working examples for:
 
 GraphQL can improve querying and performance of your Rest APIs: https://blog.apollographql.com/easy-and-performant-graphql-over-rest-e02796993b2b
 
+Future Updates:
+* Caching
+* Query Performance Improvement https://www.apollographql.com/docs/apollo-server/performance/apq/
+
 Chaining Reactions using Apollo Link: https://www.apollographql.com/docs/link/
 
 We will also attempt to bundle client & server code in the same repo using Lerna & Yarn Workspace management in future.
