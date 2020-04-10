@@ -16,3 +16,5 @@ Contains working examples for:
 * Query
 
 GraphQL can improve querying and performance of your Rest APIs: https://blog.apollographql.com/easy-and-performant-graphql-over-rest-e02796993b2b
+
+Chaining Reactions using Apollo Link: https://www.apollographql.com/docs/link/
