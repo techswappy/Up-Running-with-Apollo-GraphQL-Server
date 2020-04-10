@@ -14,3 +14,5 @@ Contains working examples for:
 * Resolvers
 * Reducers
 * Query
+
+GraphQL can improve querying and performance of your Rest APIs: https://blog.apollographql.com/easy-and-performant-graphql-over-rest-e02796993b2b
