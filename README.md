@@ -26,7 +26,8 @@ Up &amp; Running API Server with Apollo GraphQL with Rest and SQLite Connectors.
 * Chaining Reactions using Apollo Link: https://www.apollographql.com/docs/link/
 
 ### Deployment:
-* Netlify: https://www.apollographql.com/docs/apollo-server/deployment/netlify/#download-and-run-the-netlify-starter-kit
+* Netlify: 
+  * https://www.apollographql.com/docs/apollo-server/deployment/netlify/#download-and-run-the-netlify-starter-kit
   * https://dev.to/akram/how-i-used-netlify-functions-to-host-my-graphql-api-with-my-react-frontend-27j1
   * https://khalilstemmler.com/articles/tutorials/deploying-a-serverless-graphql-api-on-netlify/
 
