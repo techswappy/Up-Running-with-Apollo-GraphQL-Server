@@ -1,4 +1,11 @@
 const SQL = require('sequelize');
+const { AuthenticationError } = require('apollo-server-lambda');
+
+module.exports.validateUser = ({
+  context
+}) => {
+  if (!context.user) throw new AuthenticationError("User is not authorized.");
+};
 
 module.exports.paginateResults = ({
   after: cursor,

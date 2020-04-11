@@ -1,4 +1,7 @@
 const { paginateResults } = require('./utils');
+const { AuthenticationError } = require('apollo-server-lambda');
+const jsonwebtoken = require('jsonwebtoken');
+require('dotenv').config();
 
 module.exports = {
   Query: {
@@ -69,7 +72,17 @@ module.exports = {
   Mutation: {
     login: async (_, { email }, { dataSources }) => {
       const user = await dataSources.userAPI.findOrCreateUser({ email });
-      if (user) return Buffer.from(email).toString('base64');
+      //if (user) return Buffer.from(email).toString('base64');
+      if (user) {
+        // return json web token
+        return jsonwebtoken.sign(
+          { id: user.id, email: user.email },
+          process.env.JWT_SECRET,
+          { expiresIn: '1d' }
+        )
+      }
+
+      throw AuthenticationError('User not authorized.')
     },
     bookTrips: async (_, { launchIds }, { dataSources }) => {
         const results = await dataSources.userAPI.bookTrips({ launchIds });
