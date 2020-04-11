@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "test": "jest",
-    "bundle": "cpx src/**/* functions/bundle"
+    "bundle": "cpx \"src/**/*\" \"functions/bundle\""
   },
   "keywords": [],
   "author": "Swapnil Dey",
