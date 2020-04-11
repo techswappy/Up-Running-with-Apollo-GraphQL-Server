@@ -2,8 +2,8 @@
 Up &amp; Running API Server with Apollo GraphQL with Rest and SQLite Connectors. Playground connects with SpaceX Rest API to load Launch information for Users using Basic Authentication module.
 
 ### Example based on Apollo Guide: 
-https://www.apollographql.com/docs/tutorial/introduction/
-https://www.robinwieruch.de/graphql-apollo-server-tutorial
+* https://www.apollographql.com/docs/tutorial/introduction/
+* https://www.robinwieruch.de/graphql-apollo-server-tutorial
 
 ### Contains working examples for:
 * Schema Definition https://www.apollographql.com/docs/apollo-server/schema/schema/
