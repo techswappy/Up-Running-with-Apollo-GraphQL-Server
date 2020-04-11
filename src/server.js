@@ -1,40 +1,19 @@
 const { ApolloServer } = require('apollo-server');
 const { ApolloServerLambda } = require('apollo-server-lambda');
+const isEmail = require('isemail');
 
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 const LaunchAPI = require('./datasources/launch');
 const UserAPI = require('./datasources/user');
+const { createStore } = require('./store');
 
-const isEmail = require('isemail');
+const store = createStore();
 
-function createLambdaServer (store) {
-    return new ApolloServerLambda({
-        context: getContext,
-        typeDefs,
-        resolvers,
-        dataSources: () => ({
-            launchAPI: new LaunchAPI(),
-            userAPI: new UserAPI({ store })
-        }),
-        introspection: true,
-        playground: true
-    });
-}
-
-function createLocalServer (store) {
-    return new ApolloServer({
-        context: getContext,
-        typeDefs,
-        resolvers,
-        dataSources: () => ({
-            launchAPI: new LaunchAPI(),
-            userAPI: new UserAPI({ store })
-        }),
-        introspection: true,
-        playground: true
-    });
-}
+const getDataSources = () => ({
+    launchAPI: new LaunchAPI(),
+    userAPI: new UserAPI({ store })
+});
 
 const getContext = async ({ req }) => {
     // simple auth check on every request
@@ -49,5 +28,27 @@ const getContext = async ({ req }) => {
 
     return { user: { ...user.dataValues } };
 };
+
+function createLambdaServer () {
+    return new ApolloServerLambda({
+        context: getContext,
+        typeDefs,
+        resolvers,
+        dataSources: getDataSources,
+        introspection: true,
+        playground: true
+    });
+}
+
+function createLocalServer () {
+    return new ApolloServer({
+        context: getContext,
+        typeDefs,
+        resolvers,
+        dataSources: getDataSources,
+        introspection: true,
+        playground: true
+    });
+}
 
 module.exports = { createLambdaServer, createLocalServer }
