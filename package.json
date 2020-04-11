@@ -1,0 +1,40 @@
+{
+  "name": "apollo-graphql-serverless",
+  "version": "1.0.0",
+  "description": "Getting started with Apollo GraphQL Server.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "jest",
+    "bundle": "cpx src/**/* functions/bundle"
+  },
+  "keywords": [],
+  "author": "Swapnil Dey",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.12.0",
+    "apollo-server-lambda": "^2.12.0",
+    "cpx": "^1.5.0",
+    "nodemon": "^2.0.3",
+    "apollo-datasource": "^0.1.3",
+    "apollo-datasource-rest": "^0.1.5",
+    "apollo-server-testing": "^2.6.1",
+    "graphql": "^14.2.1",
+    "isemail": "^3.1.3",
+    "sequelize": "^4.39.0",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "apollo-link": "^1.2.3",
+    "apollo-link-http": "^1.5.5",
+    "jest": "^23.6.0",
+    "nock": "^10.0.2",
+    "node-fetch": "^2.2.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__utils"
+    ]
+  }
+}
