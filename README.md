@@ -26,6 +26,6 @@ https://www.robinwieruch.de/graphql-apollo-server-tutorial
 * https://khalilstemmler.com/articles/tutorials/deploying-a-serverless-graphql-api-on-netlify/
 
 ### Resources:
-GraphQL can improve querying and performance of your Rest APIs: https://blog.apollographql.com/easy-and-performant-graphql-over-rest-e02796993b2b
-We will also attempt to bundle client & server code in the same repo using Lerna & Yarn Workspace management in future.
+* GraphQL can improve querying and performance of your Rest APIs: https://blog.apollographql.com/easy-and-performant-graphql-over-rest-e02796993b2b
+* We will also attempt to bundle client & server code in the same repo using Lerna & Yarn Workspace management in future.
 https://medium.com/@jsilvax/a-workflow-guide-for-lerna-with-yarn-workspaces-60f97481149d
